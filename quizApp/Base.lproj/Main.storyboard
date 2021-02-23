@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Zkk-CQ-uR3">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-ON-P2M">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="637"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZV-D0-Udr">
+                                        <rect key="frame" x="0.0" y="637" width="1024" height="159"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <state key="normal" title="True">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLA-jS-zp7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-7V-Mtv">
+                                        <rect key="frame" x="0.0" y="796" width="1024" height="532"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <state key="normal" title="False">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5T-1w-Sfd"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-5g-QWq">
+                                        <rect key="frame" x="0.0" y="1328" width="1024" height="18"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8QF-ON-P2M" firstAttribute="height" secondItem="RZV-D0-Udr" secondAttribute="height" multiplier="4" id="Skv-Ag-eHb"/>
+                                    <constraint firstItem="3xd-5g-QWq" firstAttribute="height" secondItem="8QF-ON-P2M" secondAttribute="height" multiplier="0.0280843" id="hyo-Id-k0h"/>
+                                    <constraint firstItem="3xd-5g-QWq" firstAttribute="height" secondItem="MfQ-7V-Mtv" secondAttribute="height" multiplier="0.0336134" id="qRQ-7b-YQE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zkk-CQ-uR3" secondAttribute="bottom" id="Dpv-Xb-9za"/>
+                            <constraint firstItem="Zkk-CQ-uR3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ITf-MD-Ygg"/>
+                            <constraint firstItem="Zkk-CQ-uR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lr6-QE-kbV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zkk-CQ-uR3" secondAttribute="trailing" id="yxc-Xx-hPg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="MfQ-7V-Mtv" id="31N-qF-ySw"/>
+                        <outlet property="progressBar" destination="3xd-5g-QWq" id="esd-Zu-mMp"/>
+                        <outlet property="questions" destination="8QF-ON-P2M" id="g2R-df-RAB"/>
+                        <outlet property="trueButton" destination="RZV-D0-Udr" id="oPy-bS-mlJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="126"/>
         </scene>
     </scenes>
 </document>
