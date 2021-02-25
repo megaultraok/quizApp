@@ -31,9 +31,10 @@ class ViewController: UIViewController {
     }
     
     @objc func updateUI(){
-        questions.text = quizBrain.Question
+        questions.text = quizBrain.questionText()
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
+        progressBar.progress = quizBrain.progressStatus()
         
     }
     
@@ -49,12 +50,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        if questionNumber + 1 < questionBank.count {
-            questionNumber += 1
-        }
-        else {
-            questionNumber = 0
-        }
+        quizBrain.nextQuestion()
         
         Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
         

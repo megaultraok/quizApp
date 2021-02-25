@@ -20,4 +20,21 @@ struct QuizBrain {
             return false
         }
     }
+    
+    func questionText() -> String {
+        return questionBank[questionNumber].text
+    }
+    
+    func progressStatus() -> Float {
+        return Float(questionNumber)/Float(questionBank.count)
+    }
+    
+    mutating func nextQuestion(){
+        if questionNumber + 1 < questionBank.count {
+            questionNumber += 1
+        }
+        else {
+            questionNumber = 0
+        }
+    }
 }

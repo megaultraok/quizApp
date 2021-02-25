@@ -44,7 +44,7 @@
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5T-1w-Sfd"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-5g-QWq">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-5g-QWq">
                                         <rect key="frame" x="0.0" y="1328" width="1024" height="18"/>
                                     </progressView>
                                 </subviews>
