@@ -19,13 +19,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-ON-P2M">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="637"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="404.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5L-AO-fO5">
+                                        <rect key="frame" x="0.0" y="404.5" width="1024" height="491"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZV-D0-Udr">
-                                        <rect key="frame" x="0.0" y="637" width="1024" height="159"/>
+                                        <rect key="frame" x="0.0" y="895.5" width="1024" height="101"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                         <state key="normal" title="True">
                                             <color key="titleColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-7V-Mtv">
-                                        <rect key="frame" x="0.0" y="796" width="1024" height="532"/>
+                                        <rect key="frame" x="0.0" y="996.5" width="1024" height="338"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                         <state key="normal" title="False">
                                             <color key="titleColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,11 +51,12 @@
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-5g-QWq">
-                                        <rect key="frame" x="0.0" y="1328" width="1024" height="18"/>
+                                        <rect key="frame" x="0.0" y="1334.5" width="1024" height="11.5"/>
                                     </progressView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8QF-ON-P2M" firstAttribute="height" secondItem="RZV-D0-Udr" secondAttribute="height" multiplier="4" id="Skv-Ag-eHb"/>
+                                    <constraint firstItem="E5L-AO-fO5" firstAttribute="height" secondItem="8QF-ON-P2M" secondAttribute="height" multiplier="1.21384" id="VmJ-bg-n1t"/>
                                     <constraint firstItem="3xd-5g-QWq" firstAttribute="height" secondItem="8QF-ON-P2M" secondAttribute="height" multiplier="0.0280843" id="hyo-Id-k0h"/>
                                     <constraint firstItem="3xd-5g-QWq" firstAttribute="height" secondItem="MfQ-7V-Mtv" secondAttribute="height" multiplier="0.0336134" id="qRQ-7b-YQE"/>
                                 </constraints>
@@ -68,6 +75,7 @@
                         <outlet property="falseButton" destination="MfQ-7V-Mtv" id="31N-qF-ySw"/>
                         <outlet property="progressBar" destination="3xd-5g-QWq" id="esd-Zu-mMp"/>
                         <outlet property="questions" destination="8QF-ON-P2M" id="g2R-df-RAB"/>
+                        <outlet property="score" destination="E5L-AO-fO5" id="kTa-yS-LhN"/>
                         <outlet property="trueButton" destination="RZV-D0-Udr" id="oPy-bS-mlJ"/>
                     </connections>
                 </viewController>
